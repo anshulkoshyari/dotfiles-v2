@@ -1,0 +1,12 @@
+vim.g.have_nerd_font = false
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.mouse = 'a'
+vim.o.autoindent = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.shiftwidth = 2
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
+vim.o.smartindent = true
