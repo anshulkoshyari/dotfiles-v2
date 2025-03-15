@@ -22,10 +22,17 @@ skhd is a simple and lightweight keybinding manager for macOS.
 - **Written in**: C++
 - **Configuration**: `~/.config/skhd/skhdrc`
 
-## Setup
+## Installation
 
-To use these dotfiles, simply clone the repository and link the configuration files to their respective locations. For example:
+### Option 1: Manual installation (recommended for first-time users)
 
-```bash
-git clone https://github.com/anshulkoshyari/macos-dotfiles.git ~/.config
+# Clone the repository
+git clone https://github.com/anshulkoshyari/macos-dotfiles.git ~/.dotfiles
 
+# Run the installation script
+cd ~/.dotfiles
+chmod +x install.sh
+./install.sh
+
+### Option 2: One-liner (for the brave)
+git clone https://github.com/anshulkoshyari/macos-dotfiles.git ~/.dotfiles && cd ~/.dotfiles && chmod +x install.sh && ./install.sh
