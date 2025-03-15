@@ -23,26 +23,43 @@ require('lazy').setup({
     -- "3rd/image.nvim",
   },
 },
-{
-  "ellisonleao/gruvbox.nvim",
+{ 
+  'olivercederborg/poimandres.nvim',
   lazy = false,
   priority = 1000,
   config = function()
-  require("gruvbox").setup({
-  bold = false,
-  italic = { strings = false, comments = true },
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  contrast = "soft", 
-  palette_overrides = {},
-  overrides = {},
-  dim_inactive = false,
-  transparent_mode = true,
-  })
-  vim.cmd("colorscheme gruvbox")
+    require('poimandres').setup {
+      -- leave this setup function empty for default config
+      -- or refer to the configuration section
+      -- for configuration options
+    }
+  end,
+
+  -- optionally set the colorscheme within lazy config
+  init = function()
+    vim.cmd("colorscheme poimandres")
   end
-}
+},
+-- {
+--   "ellisonleao/gruvbox.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--   require("gruvbox").setup({
+--   bold = false,
+--   italic = { strings = false, comments = true },
+--   strikethrough = true,
+--   invert_selection = false,
+--   invert_signs = false,
+--   invert_tabline = false,
+--   invert_intend_guides = false,
+--   contrast = "soft", 
+--   palette_overrides = {},
+--   overrides = {},
+--   dim_inactive = false,
+--   transparent_mode = true,
+--   })
+--   vim.cmd("colorscheme gruvbox")
+--   end
+-- ,
 })
