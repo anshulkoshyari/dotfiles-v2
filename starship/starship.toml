@@ -1,175 +1,51 @@
-[aws]
-symbol = "  "
+# Add line gap between prompt and output of previous command.
+# add_newline = false
 
-[buf]
-symbol = " "
+# Starship will display the prompt after command_timeout ms. It will ignore the modules that take a time greater than command_timeout ms to load.
+command_timeout = 500
 
-[c]
-symbol = " "
+# Right format should be removed since we're using $fill
+# right_format = """$cmd_duration$memory_usage"""
+format = "$all$fill$cmd_duration$memory_usage$line_break$character"
 
-[cmake]
-symbol = " "
+[fill]
+symbol = ' '
 
-[conda]
-symbol = " "
+[line_break]
+# Prompt is one line, not two lines
+disabled = false
 
-[crystal]
-symbol = " "
+# Left prompts
+[localip]
+format = '[$localipv4]($style) '
+ssh_only = true
+disabled = false
 
-[dart]
-symbol = " "
+[git_status]
+format = '([\($all_status$ahead_behind\)]($style) )'
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "=${count}"
+deleted = "✘${count}"
+renamed = "»${count}"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
+stashed = "$${count}"
 
-[directory]
-read_only = " 󰌾"
+# Right prompts
+# [[battery.display]]
+# threshold = 100
 
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[fossil_branch]
-symbol = " "
-
-[git_branch]
-symbol = " "
-
-[git_commit]
-tag_symbol = '  '
-
-[golang]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
+[cmd_duration]
+format = '[$duration]($style) '
+style = 'dimmed white'
+min_time = 0
 
 [memory_usage]
-symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[pijul_channel]
-symbol = " "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[scala]
-symbol = " "
-
-[swift]
-symbol = " "
-
-[zig]
-symbol = " "
-
-[gradle]
-symbol = " "
+format = '$symbol[${ram}(|${swap})]($style) '
+style = 'dimmed white'
+symbol = ' '
+threshold = -1
+disabled = false
